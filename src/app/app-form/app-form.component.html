@@ -1,0 +1,26 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="row" formGroupName="personalData">
+    <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+      <input type="text" class="form-control" formControlName="gender" />
+    </div>
+    <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+      <input type="text" class="form-control" formControlName="firstName" />
+    </div>
+    <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+      <input type="text" class="form-control" formControlName="secondName" />
+    </div>
+    <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+      <input type="text" class="form-control" formControlName="lastName" />
+    </div>
+    <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+      <input type="text" class="form-control" formControlName="dateOfBirth" />
+    </div>
+    <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+      <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker formControlName="dateOfBirth" />
+    </div>
+  </div>
+</form>
+
+
+<p>Form value: {{ userForm.value | json }}</p>
+<p>Form status: {{ userForm.status | json }}</p>
